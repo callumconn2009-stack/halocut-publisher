@@ -1,0 +1,24 @@
+name: refresh-token
+# Instagram tokens last 60 days. This refreshes it on the 1st and 15th and stores the new one as the secret.
+# Optional: only runs if you add a GH_PAT secret yourself (a GitHub token allowed to write repo secrets).
+on:
+  schedule:
+    - cron: "0 3 1,15 * *"
+  workflow_dispatch: {}
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    env:
+      HAS_PAT: ${{ secrets.GH_PAT != '' }}
+    steps:
+      - name: Refresh and save
+        if: env.HAS_PAT == 'true'
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          NEW=$(curl -s "https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=$IG_ACCESS_TOKEN" | python3 -c "import sys,json;print(json.load(sys.stdin).get('access_token',''))")
+          if [ -z "$NEW" ]; then echo "refresh failed"; exit 1; fi
+          echo "::add-mask::$NEW"
+          printf '%s' "$NEW" | gh secret set IG_ACCESS_TOKEN -R "$GITHUB_REPOSITORY"
+          echo "token refreshed"
