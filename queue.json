@@ -54,5 +54,16 @@
   "post_at": "2026-10-26T21:00:00Z",
   "status": "queued",
   "thumb_ms": 1500
+ },
+ {
+  "id": "reel-202610270630",
+  "type": "reel",
+  "files": [
+   "media/202610270630_0.mp4"
+  ],
+  "caption": "Do AI edits look cheap? Only if they make these 3 mistakes 👇\n\n1. The text just repeats what's being said\n2. Nothing on screen moves for seconds at a time\n3. The hook shows up after people have already scrolled\n\nWe built Halocut's AI editing system around fixing all three: every number becomes something you see, something changes every second, and the hook lands in frame one.\n\nComment EDIT and we'll show you what it does with your footage.\n\n#videoediting #contentcreation #businessowner #reels #socialmediamarketing",
+  "post_at": "2026-10-27T06:30:00Z",
+  "status": "queued",
+  "thumb_ms": 1200
  }
 ]
