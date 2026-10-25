@@ -1,1 +1,6 @@
-{"test_hours": 72, "auto_post_winner": false, "trial_eligible": false}
+{
+  "test_hours": 72,
+  "auto_post_winner": false,
+  "trial_eligible": false,
+  "theme": { "title": "HALOCUT", "accent": "#E5102A", "display": "Anton", "body": "Poppins" }
+}
