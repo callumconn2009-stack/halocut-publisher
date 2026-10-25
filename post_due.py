@@ -6,7 +6,7 @@ Media is served by GitHub Pages at PAGES_BASE/<file>. Posted items' media is del
 Env: IG_ACCESS_TOKEN, IG_USER_ID, PAGES_BASE (e.g. https://<user>.github.io/<repo>)
 """
 import json, os, sys, time, urllib.error, urllib.parse, urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 API = "https://graph.instagram.com/v23.0"
@@ -84,16 +84,32 @@ for item in queue:
     try:
         item["permalink"] = post(item)
         item["status"], item["posted_at"] = "posted", now.isoformat(timespec="seconds")
-        for f in item["files"]:
-            (HERE / f).unlink(missing_ok=True)
+        if not item.get("trial"):  # trial media stays hosted until the batch winner is decided/re-posted
+            for f in item["files"]:
+                (HERE / f).unlink(missing_ok=True)
+        if item.get("cleanup_batch"):  # winner re-posted: the batch's media can go
+            for q in queue:
+                if q.get("batch") == item["cleanup_batch"]:
+                    for f in q["files"]:
+                        (HERE / f).unlink(missing_ok=True)
         print("posted", item["id"], item["permalink"])
     except Exception as e:  # keep going; retry next run up to 3 times
+        if item.get("trial") and "2207081" in str(e):
+            # account too small for Trial Reels: fall back to A/B, one variant per day as a normal Reel
+            order = "ABCDE".find(item.get("variant", "A"))
+            item["trial"], item["fallback"] = False, "ab_one_per_day"
+            item["post_at"] = (now + timedelta(days=max(0, order))).strftime("%Y-%m-%dT%H:%M:%SZ")
+            item["last_error"] = "trial reels need more followers (2207081): switched to A/B mode"
+            changed = True
+            print("FALLBACK", item["id"], "->", item["post_at"])
+            continue
         item["errors"] = item.get("errors", 0) + 1
         item["last_error"] = str(e)[:500]
         if item["errors"] >= 3:
             item["status"] = "failed"
         print("FAILED", item["id"], e, file=sys.stderr)
     changed = True
-    break  # one post per run, so posts never stack up at the same minute
+    if item.get("status") == "posted":
+        break  # one post per run, so posts never stack up at the same minute
 if changed:
     QUEUE.write_text(json.dumps(queue, indent=1, ensure_ascii=False), encoding="utf-8")

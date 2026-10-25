@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Trial Lab</title>
+<style>
+  :root { --bg:#F4F4F2; --card:#fff; --ink:#0B0B0C; --mute:#6B6B6B; --line:#E6E6E3; --accent:#E5102A; --good:#0F9D58; --bar:#EDEDEA; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0E0E10; --card:#17171A; --ink:#F2F2F2; --mute:#9A9AA0; --line:#26262B; --bar:#232328; } }
+  * { box-sizing:border-box } body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  .wrap { max-width:980px; margin:0 auto; padding:20px 16px 60px; }
+  header { display:flex; justify-content:space-between; align-items:flex-end; gap:12px; flex-wrap:wrap; margin-bottom:18px; }
+  h1 { margin:0; font-size:28px; letter-spacing:-.02em; } h1 span { color:var(--accent); }
+  .meta { color:var(--mute); font-size:13px; }
+  .kpis { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:14px 0 18px; }
+  .kpi { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:14px; } .kpi b { display:block; font-size:24px; letter-spacing:-.02em; }
+  .kpi small { color:var(--mute); }
+  .banner { background:var(--card); border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:12px; padding:12px 14px; margin-bottom:16px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:16px; margin-bottom:16px; }
+  .card h2 { margin:0 0 4px; font-size:18px; } .row { display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; align-items:center; }
+  .pill { font-size:12px; font-weight:700; padding:4px 10px; border-radius:99px; background:var(--bar); }
+  .pill.win { background:var(--accent); color:#fff; } .pill.test { background:#FFF2C2; color:#5c4a00; }
+  table { width:100%; border-collapse:collapse; margin-top:10px; font-size:14px; }
+  th { text-align:left; color:var(--mute); font-weight:600; font-size:12px; padding:6px 4px; border-bottom:1px solid var(--line); }
+  td { padding:9px 4px; border-bottom:1px solid var(--line); vertical-align:middle; } tr.best td { font-weight:700; }
+  .bar { height:8px; border-radius:4px; background:var(--bar); overflow:hidden; min-width:70px; } .bar i { display:block; height:100%; background:var(--accent); }
+  .num { font-variant-numeric:tabular-nums; white-space:nowrap; }
+  .notes { margin:10px 0 0; padding:0; list-style:none; } .notes li { padding:8px 10px; background:var(--bar); border-radius:10px; margin-top:6px; font-size:14px; }
+  a { color:inherit; }
+  .empty { color:var(--mute); text-align:center; padding:28px; }
+  @media (max-width:640px) { .hide-sm { display:none; } .kpis { grid-template-columns:1fr 1fr 1fr; } h1 { font-size:22px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div><h1>Trial <span>Lab</span></h1><div class="meta" id="who">Loading…</div></div>
+    <div class="meta" id="updated"></div>
+  </header>
+  <div id="banner"></div>
+  <div class="kpis" id="kpis"></div>
+  <div id="batches"></div>
+  <div class="card"><h2>Other posts</h2><div id="posts"></div></div>
+  <div class="card"><h2>Queue</h2><div id="queue"></div></div>
+  <p class="meta">"Hold" = average watch time ÷ video length, the closest number Instagram's API gives to retention. Instagram doesn't expose the exact "% past 3 seconds" through its API.</p>
+</div>
+<script>
+const pct = (x) => Math.round((x || 0) * 100) + '%';
+const n = (x) => (x || 0).toLocaleString();
+const when = (s) => s ? new Date(s).toLocaleString([], { weekday: 'short', hour: 'numeric', minute: '2-digit' }) : '';
+fetch('data/dashboard.json?' + Date.now()).then((r) => r.json()).then((d) => {
+  document.getElementById('who').textContent = '@' + (d.account.username || '') + ' · ' + n(d.account.followers_count) + ' followers';
+  document.getElementById('updated').textContent = 'Updated ' + when(d.updated);
+  if (!d.trial_eligible) document.getElementById('banner').innerHTML = '<div class="banner"><b>Trial Reels aren\'t unlocked on this account yet</b> (Instagram needs more followers). Variants are posting as normal Reels, one per day, as an A/B test. It switches to real Trial Reels automatically once unlocked.</div>';
+  const all = d.batches.flatMap((b) => b.variants).concat(d.posts);
+  const views = all.reduce((a, p) => a + (p.views || 0), 0);
+  const hold = all.length ? all.reduce((a, p) => a + (p.retention || 0), 0) / all.length : 0;
+  const ss = all.reduce((a, p) => a + (p.shares || 0) + (p.saved || 0), 0);
+  document.getElementById('kpis').innerHTML = `<div class="kpi"><small>Views</small><b>${n(views)}</b></div><div class="kpi"><small>Avg hold</small><b>${pct(hold)}</b></div><div class="kpi"><small>Shares + saves</small><b>${n(ss)}</b></div>`;
+  const B = document.getElementById('batches');
+  if (!d.batches.length) B.innerHTML = '<div class="card empty">No trial batches yet. Add 5 videos and they appear here.</div>';
+  d.batches.forEach((b) => {
+    const top = b.variants[0];
+    const status = b.winner ? `<span class="pill win">Winner: ${b.winner}</span>` : `<span class="pill test">Testing until ${when(b.test_ends)}</span>`;
+    const rows = b.variants.map((v, i) => `<tr class="${i === 0 ? 'best' : ''}"><td>${v.variant || '-'}</td>
+      <td><a href="${v.permalink}" target="_blank" rel="noopener">${(v.label || '').replace(/</g, '')}</a></td>
+      <td class="num">${n(v.views)}</td><td class="hide-sm num">${n(v.reach)}</td>
+      <td><div class="bar"><i style="width:${Math.min(100, (v.retention || 0) * 100)}%"></i></div><span class="num">${pct(v.retention)}</span></td>
+      <td class="hide-sm num">${n((v.shares || 0) + (v.saved || 0))}</td><td class="num"><b>${v.score}</b></td></tr>`).join('');
+    const notes = [...(b.notes || [])];
+    if (b.winner) notes.unshift(`Open variant ${b.winner} in Instagram → ⋯ → <b>Share to followers</b> (Instagram doesn't allow apps to do this step).`);
+    else if (top) notes.unshift(`Leading so far: variant ${top.variant} (score ${top.score}). Final call at ${when(b.test_ends)}.`);
+    B.insertAdjacentHTML('beforeend', `<div class="card"><div class="row"><h2>Batch ${b.id}</h2>${status}</div>
+      <table><tr><th>Var</th><th>Hook</th><th>Views</th><th class="hide-sm">Reach</th><th>Hold</th><th class="hide-sm">Shares+saves</th><th>Score</th></tr>${rows}</table>
+      <ul class="notes">${notes.map((t) => `<li>${t}</li>`).join('')}</ul></div>`);
+  });
+  document.getElementById('posts').innerHTML = d.posts.length ? `<table><tr><th>Post</th><th>Views</th><th>Hold</th><th class="hide-sm">Shares+saves</th><th>Score</th></tr>${d.posts.map((p) => `<tr><td><a href="${p.permalink}" target="_blank" rel="noopener">${(p.label || '').replace(/</g, '')}</a></td><td class="num">${n(p.views)}</td><td class="num">${pct(p.retention)}</td><td class="hide-sm num">${n((p.shares || 0) + (p.saved || 0))}</td><td class="num"><b>${p.score}</b></td></tr>`).join('')}</table>` : '<div class="empty">Nothing yet.</div>';
+  document.getElementById('queue').innerHTML = d.queue.length ? `<table><tr><th>Item</th><th>When</th><th>Status</th></tr>${d.queue.map((q) => `<tr><td>${q.id}${q.trial ? ' · trial' : ''}</td><td class="num">${when(q.post_at)}</td><td>${q.status}</td></tr>`).join('')}</table>` : '<div class="empty">Queue empty.</div>';
+}).catch(() => { document.getElementById('who').textContent = 'No data yet: the first analytics run fills this in.'; });
+</script>
+</body>
+</html>

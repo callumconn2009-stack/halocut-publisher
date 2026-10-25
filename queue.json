@@ -10,7 +10,10 @@
   "status": "posted",
   "thumb_ms": 3000,
   "permalink": "https://www.instagram.com/reel/De7qD8okTij/",
-  "posted_at": "2026-10-25T21:19:02+00:00"
+  "posted_at": "2026-10-25T21:19:02+00:00",
+  "media_id": "18109750481337883",
+  "duration": 36.63,
+  "label": "Per-edit trap ($50 a Reel)"
  },
  {
   "id": "carousel-202610260130",
@@ -37,6 +40,8 @@
   "caption": "Six seconds felt long, didn't it? 👀\n\nNow imagine waiting three days for every video you post. That's the old way of getting content edited.\n\nHalocut is an AI video editing system for businesses. Send us your raw clips, get post-ready Reels back. No chasing an editor, no endless revision rounds. Just clean cuts.\n\nComment CUT and I'll show you how it works.\n\n#videoediting #businessowner #contentmarketing #smallbusiness #reels",
   "post_at": "2026-10-26T06:30:00Z",
   "status": "queued",
-  "thumb_ms": 4500
+  "thumb_ms": 4500,
+  "duration": 22.04,
+  "label": "Ice hammer"
  }
 ]
