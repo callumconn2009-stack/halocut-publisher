@@ -103,8 +103,15 @@ if changed_queue:
     (HERE / "queue.json").write_text(json.dumps(queue, indent=1, ensure_ascii=False), encoding="utf-8")
 
 acct = get("me", fields="username,followers_count,media_count")
+# eligibility: proven by a successful trial post, disproven by Instagram's follower error, otherwise a follower estimate
+if any(q.get("trial") and q.get("status") == "posted" for q in queue):
+    trial_eligible = True
+elif any("2207081" in q.get("last_error", "") for q in queue) or CFG.get("trial_eligible") is False:
+    trial_eligible = False
+else:
+    trial_eligible = (acct.get("followers_count") or 0) >= CFG.get("trial_followers_estimate", 1000)
 dash = {"updated": now.isoformat(timespec="minutes"), "account": {k: acct.get(k) for k in ("username", "followers_count", "media_count")},
-        "trial_eligible": not any(q.get("last_error", "").find("2207081") >= 0 for q in queue),
+        "trial_eligible": trial_eligible,
         "batches": sorted(out_batches, key=lambda b: b["id"], reverse=True),
         "posts": sorted([p for p in posts if not p["batch"]], key=lambda p: p["posted_at"] or "", reverse=True),
         "queue": [{"id": q["id"], "post_at": q["post_at"], "status": q["status"], "trial": bool(q.get("trial"))} for q in queue if q["status"] != "posted"]}
