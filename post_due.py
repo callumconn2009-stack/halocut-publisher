@@ -54,8 +54,11 @@ def url_of(f):
 
 def post(item):
     if item["type"] == "reel":
+        extra = {}
+        if item.get("trial"):  # Trial Reel: shown to non-followers first; graduate the winner in the app
+            extra["trial_params"] = json.dumps({"graduation_strategy": item.get("graduation", "MANUAL")})
         c = call("POST", f"{USER}/media", media_type="REELS", video_url=url_of(item["files"][0]), caption=item["caption"],
-                 share_to_feed="true", thumb_offset=str(item.get("thumb_ms", 0)))
+                 share_to_feed="true", thumb_offset=str(item.get("thumb_ms", 0)), **extra)
         wait_ready(c["id"])
     else:
         kids = []
@@ -68,6 +71,7 @@ def post(item):
         c = call("POST", f"{USER}/media", media_type="CAROUSEL", children=",".join(kids), caption=item["caption"])
         wait_ready(c["id"])
     res = call("POST", f"{USER}/media_publish", creation_id=c["id"])
+    item["media_id"] = res["id"]
     return call("GET", res["id"], fields="permalink")["permalink"]
 
 
