@@ -1,23 +1,19 @@
 {
- "updated": "2026-10-26T04:41+00:00",
+ "updated": "2026-10-26T12:54+00:00",
  "account": {
   "username": "halo_cut2026",
   "followers_count": 0,
-  "media_count": 2
+  "media_count": 3
  },
  "stats": {
-  "views_28d": 107,
+  "views_28d": 255,
   "views_prev_28d": 0,
-  "reach_28d": 98,
+  "reach_28d": 232,
   "engaged_28d": 1,
-  "profile_views_28d": 1,
-  "median_reel_views": 108
+  "profile_views_28d": 2,
+  "median_reel_views": 150
  },
  "reach_daily": [
-  {
-   "d": "2026-09-27",
-   "v": 0
-  },
   {
    "d": "2026-09-28",
    "v": 0
@@ -129,6 +125,10 @@
   {
    "d": "2026-10-25",
    "v": 98
+  },
+  {
+   "d": "2026-10-26",
+   "v": 134
   }
  ],
  "theme": {
@@ -140,6 +140,43 @@
  "trial_eligible": false,
  "batches": [],
  "posts": [
+  {
+   "id": "reel-202610260630",
+   "media_id": "18636520483050030",
+   "permalink": "https://www.instagram.com/reel/De8vas7nMsy/",
+   "type": "reel",
+   "batch": null,
+   "variant": null,
+   "label": "Ice hammer",
+   "trial": false,
+   "posted_at": "2026-10-26T07:25:15+00:00",
+   "duration": 22.04,
+   "avg_watch_s": 8.6,
+   "retention": 0.391,
+   "opens_on": null,
+   "views": 150,
+   "reach": 132,
+   "ig_reels_avg_watch_time": 8627,
+   "ig_reels_video_view_total_time": 1181927,
+   "reels_skip_rate": 34.3,
+   "likes": 0,
+   "comments": 0,
+   "shares": 0,
+   "saved": 0,
+   "total_interactions": 0,
+   "past3s": 65.7,
+   "shares_per_1k": 0.0,
+   "thumb": "data/thumbs/18636520483050030.jpg",
+   "series": [
+    {
+     "t": "2026-10-26T12:54+00:00",
+     "views": 150,
+     "past3s": 65.7
+    }
+   ],
+   "hook_type": null,
+   "score": 66.5
+  },
   {
    "id": "carousel-202610260130",
    "media_id": "18113150501172927",
@@ -169,6 +206,11 @@
      "t": "2026-10-26T04:41+00:00",
      "views": 0,
      "past3s": null
+    },
+    {
+     "t": "2026-10-26T12:54+00:00",
+     "views": 0,
+     "past3s": null
     }
    ],
    "hook_type": null,
@@ -185,20 +227,20 @@
    "trial": false,
    "posted_at": "2026-10-25T21:19:02+00:00",
    "duration": 36.63,
-   "avg_watch_s": 5.5,
-   "retention": 0.149,
+   "avg_watch_s": 5.4,
+   "retention": 0.148,
    "opens_on": null,
-   "views": 108,
-   "reach": 98,
-   "ig_reels_avg_watch_time": 5457,
-   "ig_reels_video_view_total_time": 567603,
-   "reels_skip_rate": 68,
+   "views": 109,
+   "reach": 100,
+   "ig_reels_avg_watch_time": 5410,
+   "ig_reels_video_view_total_time": 568117,
+   "reels_skip_rate": 68.3,
    "likes": 1,
    "comments": 0,
    "shares": 0,
    "saved": 0,
    "total_interactions": 1,
-   "past3s": 32,
+   "past3s": 31.7,
    "shares_per_1k": 0.0,
    "thumb": "data/thumbs/18109750481337883.jpg",
    "series": [
@@ -216,20 +258,19 @@
      "t": "2026-10-26T04:41+00:00",
      "views": 108,
      "past3s": 32
+    },
+    {
+     "t": "2026-10-26T12:54+00:00",
+     "views": 109,
+     "past3s": 31.7
     }
    ],
    "hook_type": null,
-   "score": 30.3
+   "score": 30.0
   }
  ],
  "batch_meta": {},
  "queue": [
-  {
-   "id": "reel-202610260630",
-   "post_at": "2026-10-26T06:30:00Z",
-   "status": "queued",
-   "trial": false
-  },
   {
    "id": "reel-202610262100",
    "post_at": "2026-10-26T21:00:00Z",
