@@ -1,7 +1,7 @@
 name: post-due
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "*/5 * * * *"  # GitHub often skips scheduled runs on free accounts; more checks = posts land close to time
   workflow_dispatch: {}
 permissions:
   contents: write
