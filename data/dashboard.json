@@ -1,17 +1,17 @@
 {
- "updated": "2026-10-27T15:19+00:00",
+ "updated": "2026-10-27T22:09+00:00",
  "account": {
   "username": "halo_cut2026",
   "followers_count": 2,
-  "media_count": 6
+  "media_count": 7
  },
  "stats": {
-  "views_28d": 446,
+  "views_28d": 454,
   "views_prev_28d": 0,
-  "reach_28d": 386,
+  "reach_28d": 389,
   "engaged_28d": 4,
   "profile_views_28d": 6,
-  "median_reel_views": 119
+  "median_reel_views": 115
  },
  "reach_daily": [
   {
@@ -128,7 +128,7 @@
   },
   {
    "d": "2026-10-27",
-   "v": 106
+   "v": 109
   }
  ],
  "theme": {
@@ -141,6 +141,43 @@
  "batches": [],
  "posts": [
   {
+   "id": "reel-202610290630",
+   "media_id": "18136698814656813",
+   "permalink": "https://www.instagram.com/reel/DfAyFVCoMBz/",
+   "type": "reel",
+   "batch": null,
+   "variant": null,
+   "label": "\"Make it pop.\" 🔥 …that's not a brief.",
+   "trial": false,
+   "posted_at": "2026-10-27T21:05:17+00:00",
+   "duration": 0,
+   "avg_watch_s": 10.0,
+   "retention": 0,
+   "opens_on": null,
+   "views": 6,
+   "reach": 4,
+   "ig_reels_avg_watch_time": 10028,
+   "ig_reels_video_view_total_time": 50141,
+   "reels_skip_rate": 50,
+   "likes": 2,
+   "comments": 0,
+   "shares": 0,
+   "saved": 0,
+   "total_interactions": 2,
+   "past3s": 50,
+   "shares_per_1k": 0.0,
+   "thumb": "data/thumbs/18136698814656813.jpg",
+   "series": [
+    {
+     "t": "2026-10-27T22:09+00:00",
+     "views": 6,
+     "past3s": 50
+    }
+   ],
+   "hook_type": null,
+   "score": 35.7
+  },
+  {
    "id": "reel-202610290631",
    "media_id": "17920060275456843",
    "permalink": "https://www.instagram.com/reel/De_Oholjfnk/",
@@ -151,13 +188,13 @@
    "trial": false,
    "posted_at": "2026-10-27T06:35:19+00:00",
    "duration": 0,
-   "avg_watch_s": 9.1,
+   "avg_watch_s": 9.0,
    "retention": 0,
    "opens_on": null,
    "views": 119,
    "reach": 107,
-   "ig_reels_avg_watch_time": 9059,
-   "ig_reels_video_view_total_time": 978375,
+   "ig_reels_avg_watch_time": 8991,
+   "ig_reels_video_view_total_time": 980094,
    "reels_skip_rate": 43.9,
    "likes": 3,
    "comments": 0,
@@ -175,6 +212,11 @@
     },
     {
      "t": "2026-10-27T15:19+00:00",
+     "views": 119,
+     "past3s": 56.1
+    },
+    {
+     "t": "2026-10-27T22:09+00:00",
      "views": 119,
      "past3s": 56.1
     }
@@ -216,6 +258,11 @@
      "t": "2026-10-27T15:19+00:00",
      "views": 5,
      "past3s": null
+    },
+    {
+     "t": "2026-10-27T22:09+00:00",
+     "views": 5,
+     "past3s": null
     }
    ],
    "hook_type": null,
@@ -232,20 +279,20 @@
    "trial": false,
    "posted_at": "2026-10-26T23:47:39+00:00",
    "duration": 0,
-   "avg_watch_s": 3.1,
+   "avg_watch_s": 3.7,
    "retention": 0,
    "opens_on": null,
-   "views": 44,
+   "views": 47,
    "reach": 40,
-   "ig_reels_avg_watch_time": 3068,
-   "ig_reels_video_view_total_time": 138086,
-   "reels_skip_rate": 83.3,
+   "ig_reels_avg_watch_time": 3746,
+   "ig_reels_video_view_total_time": 176062,
+   "reels_skip_rate": 80,
    "likes": 2,
    "comments": 0,
    "shares": 0,
    "saved": 0,
    "total_interactions": 2,
-   "past3s": 16.7,
+   "past3s": 20,
    "shares_per_1k": 0.0,
    "thumb": "data/thumbs/18100405619454064.jpg",
    "series": [
@@ -263,10 +310,15 @@
      "t": "2026-10-27T15:19+00:00",
      "views": 44,
      "past3s": 16.7
+    },
+    {
+     "t": "2026-10-27T22:09+00:00",
+     "views": 47,
+     "past3s": 20
     }
    ],
    "hook_type": null,
-   "score": 11.9
+   "score": 14.3
   },
   {
    "id": "reel-202610260630",
@@ -318,6 +370,11 @@
     },
     {
      "t": "2026-10-27T15:19+00:00",
+     "views": 159,
+     "past3s": 64.3
+    },
+    {
+     "t": "2026-10-27T22:09+00:00",
      "views": 159,
      "past3s": 64.3
     }
@@ -377,6 +434,11 @@
     },
     {
      "t": "2026-10-27T15:19+00:00",
+     "views": 9,
+     "past3s": null
+    },
+    {
+     "t": "2026-10-27T22:09+00:00",
      "views": 9,
      "past3s": null
     }
@@ -451,6 +513,11 @@
      "t": "2026-10-27T15:19+00:00",
      "views": 115,
      "past3s": 32.7
+    },
+    {
+     "t": "2026-10-27T22:09+00:00",
+     "views": 115,
+     "past3s": 32.7
     }
    ],
    "hook_type": null,
@@ -474,18 +541,12 @@
   {
    "id": "reel-202610280630",
    "post_at": "2026-10-28T06:30:00Z",
-   "status": "queued",
+   "status": "held",
    "trial": false
   },
   {
    "id": "reel-202610282100",
    "post_at": "2026-10-29T06:30:00Z",
-   "status": "queued",
-   "trial": false
-  },
-  {
-   "id": "reel-202610290630",
-   "post_at": "2026-10-27T21:00:00Z",
    "status": "queued",
    "trial": false
   }
