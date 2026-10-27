@@ -1,16 +1,16 @@
 {
- "updated": "2026-10-27T08:55+00:00",
+ "updated": "2026-10-27T15:19+00:00",
  "account": {
   "username": "halo_cut2026",
   "followers_count": 2,
   "media_count": 6
  },
  "stats": {
-  "views_28d": 433,
+  "views_28d": 446,
   "views_prev_28d": 0,
-  "reach_28d": 379,
+  "reach_28d": 386,
   "engaged_28d": 4,
-  "profile_views_28d": 5,
+  "profile_views_28d": 6,
   "median_reel_views": 119
  },
  "reach_daily": [
@@ -128,7 +128,7 @@
   },
   {
    "d": "2026-10-27",
-   "v": 99
+   "v": 106
   }
  ],
  "theme": {
@@ -155,7 +155,7 @@
    "retention": 0,
    "opens_on": null,
    "views": 119,
-   "reach": 106,
+   "reach": 107,
    "ig_reels_avg_watch_time": 9059,
    "ig_reels_video_view_total_time": 978375,
    "reels_skip_rate": 43.9,
@@ -170,6 +170,11 @@
    "series": [
     {
      "t": "2026-10-27T08:55+00:00",
+     "views": 119,
+     "past3s": 56.1
+    },
+    {
+     "t": "2026-10-27T15:19+00:00",
      "views": 119,
      "past3s": 56.1
     }
@@ -192,7 +197,7 @@
    "retention": 0,
    "opens_on": null,
    "views": 5,
-   "reach": 1,
+   "reach": 2,
    "likes": 2,
    "comments": 0,
    "shares": 0,
@@ -204,6 +209,11 @@
    "series": [
     {
      "t": "2026-10-27T08:55+00:00",
+     "views": 5,
+     "past3s": null
+    },
+    {
+     "t": "2026-10-27T15:19+00:00",
      "views": 5,
      "past3s": null
     }
@@ -222,20 +232,20 @@
    "trial": false,
    "posted_at": "2026-10-26T23:47:39+00:00",
    "duration": 0,
-   "avg_watch_s": 3.2,
+   "avg_watch_s": 3.1,
    "retention": 0,
    "opens_on": null,
-   "views": 39,
-   "reach": 35,
-   "ig_reels_avg_watch_time": 3249,
-   "ig_reels_video_view_total_time": 129976,
-   "reels_skip_rate": 83.8,
+   "views": 44,
+   "reach": 40,
+   "ig_reels_avg_watch_time": 3068,
+   "ig_reels_video_view_total_time": 138086,
+   "reels_skip_rate": 83.3,
    "likes": 2,
    "comments": 0,
    "shares": 0,
    "saved": 0,
    "total_interactions": 2,
-   "past3s": 16.2,
+   "past3s": 16.7,
    "shares_per_1k": 0.0,
    "thumb": "data/thumbs/18100405619454064.jpg",
    "series": [
@@ -248,10 +258,15 @@
      "t": "2026-10-27T08:55+00:00",
      "views": 39,
      "past3s": 16.2
+    },
+    {
+     "t": "2026-10-27T15:19+00:00",
+     "views": 44,
+     "past3s": 16.7
     }
    ],
    "hook_type": null,
-   "score": 11.6
+   "score": 11.9
   },
   {
    "id": "reel-202610260630",
@@ -268,7 +283,7 @@
    "retention": 0.38,
    "opens_on": null,
    "views": 159,
-   "reach": 142,
+   "reach": 143,
    "ig_reels_avg_watch_time": 8384,
    "ig_reels_video_view_total_time": 1232477,
    "reels_skip_rate": 35.7,
@@ -300,6 +315,11 @@
      "t": "2026-10-27T08:55+00:00",
      "views": 159,
      "past3s": 64.3
+    },
+    {
+     "t": "2026-10-27T15:19+00:00",
+     "views": 159,
+     "past3s": 64.3
     }
    ],
    "hook_type": null,
@@ -319,8 +339,8 @@
    "avg_watch_s": 0.0,
    "retention": 0,
    "opens_on": null,
-   "views": 4,
-   "reach": 1,
+   "views": 9,
+   "reach": 2,
    "likes": 1,
    "comments": 0,
    "shares": 0,
@@ -353,6 +373,11 @@
     {
      "t": "2026-10-27T08:55+00:00",
      "views": 4,
+     "past3s": null
+    },
+    {
+     "t": "2026-10-27T15:19+00:00",
+     "views": 9,
      "past3s": null
     }
    ],
@@ -419,6 +444,11 @@
     },
     {
      "t": "2026-10-27T08:55+00:00",
+     "views": 115,
+     "past3s": 32.7
+    },
+    {
+     "t": "2026-10-27T15:19+00:00",
      "views": 115,
      "past3s": 32.7
     }
