@@ -1,23 +1,19 @@
 {
- "updated": "2026-10-28T05:35+00:00",
+ "updated": "2026-10-28T12:46+00:00",
  "account": {
   "username": "halo_cut2026",
   "followers_count": 2,
   "media_count": 7
  },
  "stats": {
-  "views_28d": 467,
+  "views_28d": 468,
   "views_prev_28d": 0,
-  "reach_28d": 398,
+  "reach_28d": 400,
   "engaged_28d": 4,
   "profile_views_28d": 9,
   "median_reel_views": 115
  },
  "reach_daily": [
-  {
-   "d": "2026-09-29",
-   "v": 0
-  },
   {
    "d": "2026-09-30",
    "v": 0
@@ -129,6 +125,10 @@
   {
    "d": "2026-10-27",
    "v": 120
+  },
+  {
+   "d": "2026-10-28",
+   "v": 1
   }
  ],
  "theme": {
@@ -151,20 +151,20 @@
    "trial": false,
    "posted_at": "2026-10-27T21:05:17+00:00",
    "duration": 0,
-   "avg_watch_s": 4.5,
+   "avg_watch_s": 4.3,
    "retention": 0,
    "opens_on": null,
-   "views": 18,
-   "reach": 14,
-   "ig_reels_avg_watch_time": 4521,
-   "ig_reels_video_view_total_time": 72346,
-   "reels_skip_rate": 80,
+   "views": 19,
+   "reach": 15,
+   "ig_reels_avg_watch_time": 4299,
+   "ig_reels_video_view_total_time": 73083,
+   "reels_skip_rate": 81.3,
    "likes": 2,
    "comments": 0,
    "shares": 0,
    "saved": 0,
    "total_interactions": 2,
-   "past3s": 20,
+   "past3s": 18.7,
    "shares_per_1k": 0.0,
    "thumb": "data/thumbs/18136698814656813.jpg",
    "series": [
@@ -177,10 +177,15 @@
      "t": "2026-10-28T05:35+00:00",
      "views": 18,
      "past3s": 20
+    },
+    {
+     "t": "2026-10-28T12:46+00:00",
+     "views": 19,
+     "past3s": 18.7
     }
    ],
    "hook_type": null,
-   "score": 14.3
+   "score": 13.4
   },
   {
    "id": "reel-202610290631",
@@ -227,6 +232,11 @@
     },
     {
      "t": "2026-10-28T05:35+00:00",
+     "views": 119,
+     "past3s": 56.1
+    },
+    {
+     "t": "2026-10-28T12:46+00:00",
      "views": 119,
      "past3s": 56.1
     }
@@ -276,6 +286,11 @@
     },
     {
      "t": "2026-10-28T05:35+00:00",
+     "views": 5,
+     "past3s": null
+    },
+    {
+     "t": "2026-10-28T12:46+00:00",
      "views": 5,
      "past3s": null
     }
@@ -333,6 +348,11 @@
     },
     {
      "t": "2026-10-28T05:35+00:00",
+     "views": 47,
+     "past3s": 17.8
+    },
+    {
+     "t": "2026-10-28T12:46+00:00",
      "views": 47,
      "past3s": 17.8
     }
@@ -402,6 +422,11 @@
      "t": "2026-10-28T05:35+00:00",
      "views": 159,
      "past3s": 64.3
+    },
+    {
+     "t": "2026-10-28T12:46+00:00",
+     "views": 159,
+     "past3s": 64.3
     }
    ],
    "hook_type": null,
@@ -469,6 +494,11 @@
     },
     {
      "t": "2026-10-28T05:35+00:00",
+     "views": 9,
+     "past3s": null
+    },
+    {
+     "t": "2026-10-28T12:46+00:00",
      "views": 9,
      "past3s": null
     }
@@ -551,6 +581,11 @@
     },
     {
      "t": "2026-10-28T05:35+00:00",
+     "views": 115,
+     "past3s": 32.7
+    },
+    {
+     "t": "2026-10-28T12:46+00:00",
      "views": 115,
      "past3s": 32.7
     }
