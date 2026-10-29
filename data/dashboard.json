@@ -1,23 +1,19 @@
 {
- "updated": "2026-10-29T00:53+00:00",
+ "updated": "2026-10-29T09:53+00:00",
  "account": {
   "username": "halo_cut2026",
   "followers_count": 2,
-  "media_count": 8
+  "media_count": 9
  },
  "stats": {
-  "views_28d": 500,
+  "views_28d": 669,
   "views_prev_28d": 0,
-  "reach_28d": 423,
-  "engaged_28d": 4,
-  "profile_views_28d": 10,
+  "reach_28d": 553,
+  "engaged_28d": 7,
+  "profile_views_28d": 13,
   "median_reel_views": 115
  },
  "reach_daily": [
-  {
-   "d": "2026-09-30",
-   "v": 0
-  },
   {
    "d": "2026-10-01",
    "v": 0
@@ -128,7 +124,11 @@
   },
   {
    "d": "2026-10-28",
-   "v": 28
+   "v": 32
+  },
+  {
+   "d": "2026-10-29",
+   "v": 140
   }
  ],
  "theme": {
@@ -141,6 +141,43 @@
  "batches": [],
  "posts": [
   {
+   "id": "reel-202610282100",
+   "media_id": "17992044015079752",
+   "permalink": "https://www.instagram.com/reel/DfEYGaICkDA/",
+   "type": "reel",
+   "batch": null,
+   "variant": null,
+   "label": "Watching this on mute? Good. That's the test. 🔇",
+   "trial": false,
+   "posted_at": "2026-10-29T06:35:20+00:00",
+   "duration": 0,
+   "avg_watch_s": 11.1,
+   "retention": 0,
+   "opens_on": null,
+   "views": 152,
+   "reach": 134,
+   "ig_reels_avg_watch_time": 11130,
+   "ig_reels_video_view_total_time": 1491549,
+   "reels_skip_rate": 49.6,
+   "likes": 3,
+   "comments": 0,
+   "shares": 0,
+   "saved": 0,
+   "total_interactions": 3,
+   "past3s": 50.4,
+   "shares_per_1k": 0.0,
+   "thumb": "data/thumbs/17992044015079752.jpg",
+   "series": [
+    {
+     "t": "2026-10-29T09:53+00:00",
+     "views": 152,
+     "past3s": 50.4
+    }
+   ],
+   "hook_type": null,
+   "score": 36.0
+  },
+  {
    "id": "reel-202610270630",
    "media_id": "18036272093893444",
    "permalink": "https://www.instagram.com/reel/DfDW235k6EE/",
@@ -151,20 +188,20 @@
    "trial": false,
    "posted_at": "2026-10-28T21:05:17+00:00",
    "duration": 0,
-   "avg_watch_s": 3.0,
+   "avg_watch_s": 4.2,
    "retention": 0,
    "opens_on": null,
-   "views": 32,
-   "reach": 27,
-   "ig_reels_avg_watch_time": 3004,
-   "ig_reels_video_view_total_time": 84125,
-   "reels_skip_rate": 82.1,
+   "views": 49,
+   "reach": 41,
+   "ig_reels_avg_watch_time": 4179,
+   "ig_reels_video_view_total_time": 183895,
+   "reels_skip_rate": 75,
    "likes": 0,
    "comments": 0,
    "shares": 0,
    "saved": 0,
    "total_interactions": 0,
-   "past3s": 17.9,
+   "past3s": 25,
    "shares_per_1k": 0.0,
    "thumb": "data/thumbs/18036272093893444.jpg",
    "series": [
@@ -172,10 +209,15 @@
      "t": "2026-10-29T00:53+00:00",
      "views": 32,
      "past3s": 17.9
+    },
+    {
+     "t": "2026-10-29T09:53+00:00",
+     "views": 49,
+     "past3s": 25
     }
    ],
    "hook_type": null,
-   "score": 12.8
+   "score": 17.9
   },
   {
    "id": "reel-202610290630",
@@ -227,6 +269,11 @@
     },
     {
      "t": "2026-10-29T00:53+00:00",
+     "views": 19,
+     "past3s": 18.7
+    },
+    {
+     "t": "2026-10-29T09:53+00:00",
      "views": 19,
      "past3s": 18.7
     }
@@ -296,6 +343,11 @@
      "t": "2026-10-29T00:53+00:00",
      "views": 119,
      "past3s": 56.1
+    },
+    {
+     "t": "2026-10-29T09:53+00:00",
+     "views": 119,
+     "past3s": 56.1
     }
    ],
    "hook_type": null,
@@ -358,6 +410,11 @@
     },
     {
      "t": "2026-10-29T00:53+00:00",
+     "views": 5,
+     "past3s": null
+    },
+    {
+     "t": "2026-10-29T09:53+00:00",
      "views": 5,
      "past3s": null
     }
@@ -430,6 +487,11 @@
     },
     {
      "t": "2026-10-29T00:53+00:00",
+     "views": 47,
+     "past3s": 17.8
+    },
+    {
+     "t": "2026-10-29T09:53+00:00",
      "views": 47,
      "past3s": 17.8
     }
@@ -514,6 +576,11 @@
      "t": "2026-10-29T00:53+00:00",
      "views": 159,
      "past3s": 64.3
+    },
+    {
+     "t": "2026-10-29T09:53+00:00",
+     "views": 159,
+     "past3s": 64.3
     }
    ],
    "hook_type": null,
@@ -596,6 +663,11 @@
     },
     {
      "t": "2026-10-29T00:53+00:00",
+     "views": 9,
+     "past3s": null
+    },
+    {
+     "t": "2026-10-29T09:53+00:00",
      "views": 9,
      "past3s": null
     }
@@ -695,6 +767,11 @@
      "t": "2026-10-29T00:53+00:00",
      "views": 115,
      "past3s": 32.7
+    },
+    {
+     "t": "2026-10-29T09:53+00:00",
+     "views": 115,
+     "past3s": 32.7
     }
    ],
    "hook_type": null,
@@ -713,12 +790,6 @@
    "id": "reel-202610280630",
    "post_at": "2026-10-28T06:30:00Z",
    "status": "held",
-   "trial": false
-  },
-  {
-   "id": "reel-202610282100",
-   "post_at": "2026-10-29T06:30:00Z",
-   "status": "queued",
    "trial": false
   }
  ]
