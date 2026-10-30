@@ -1,12 +1,12 @@
 {
- "updated": "2026-10-29T18:26+00:00",
+ "updated": "2026-10-30T00:57+00:00",
  "account": {
   "username": "halo_cut2026",
   "followers_count": 2,
   "media_count": 9
  },
  "stats": {
-  "views_28d": 680,
+  "views_28d": 681,
   "views_prev_28d": 0,
   "reach_28d": 560,
   "engaged_28d": 7,
@@ -128,7 +128,7 @@
   },
   {
    "d": "2026-10-29",
-   "v": 148
+   "v": 149
   }
  ],
  "theme": {
@@ -177,6 +177,11 @@
      "t": "2026-10-29T18:26+00:00",
      "views": 156,
      "past3s": 50.7
+    },
+    {
+     "t": "2026-10-30T00:57+00:00",
+     "views": 156,
+     "past3s": 50.7
     }
    ],
    "hook_type": null,
@@ -196,17 +201,17 @@
    "avg_watch_s": 4.4,
    "retention": 0,
    "opens_on": null,
-   "views": 56,
-   "reach": 47,
-   "ig_reels_avg_watch_time": 4410,
-   "ig_reels_video_view_total_time": 224911,
-   "reels_skip_rate": 74.5,
+   "views": 57,
+   "reach": 48,
+   "ig_reels_avg_watch_time": 4413,
+   "ig_reels_video_view_total_time": 229526,
+   "reels_skip_rate": 73.1,
    "likes": 0,
    "comments": 0,
    "shares": 0,
    "saved": 0,
    "total_interactions": 0,
-   "past3s": 25.5,
+   "past3s": 26.9,
    "shares_per_1k": 0.0,
    "thumb": "data/thumbs/18036272093893444.jpg",
    "series": [
@@ -224,10 +229,15 @@
      "t": "2026-10-29T18:26+00:00",
      "views": 56,
      "past3s": 25.5
+    },
+    {
+     "t": "2026-10-30T00:57+00:00",
+     "views": 57,
+     "past3s": 26.9
     }
    ],
    "hook_type": null,
-   "score": 18.2
+   "score": 19.2
   },
   {
    "id": "reel-202610290630",
@@ -289,6 +299,11 @@
     },
     {
      "t": "2026-10-29T18:26+00:00",
+     "views": 19,
+     "past3s": 18.7
+    },
+    {
+     "t": "2026-10-30T00:57+00:00",
      "views": 19,
      "past3s": 18.7
     }
@@ -368,6 +383,11 @@
      "t": "2026-10-29T18:26+00:00",
      "views": 119,
      "past3s": 56.1
+    },
+    {
+     "t": "2026-10-30T00:57+00:00",
+     "views": 119,
+     "past3s": 56.1
     }
    ],
    "hook_type": null,
@@ -440,6 +460,11 @@
     },
     {
      "t": "2026-10-29T18:26+00:00",
+     "views": 5,
+     "past3s": null
+    },
+    {
+     "t": "2026-10-30T00:57+00:00",
      "views": 5,
      "past3s": null
     }
@@ -522,6 +547,11 @@
     },
     {
      "t": "2026-10-29T18:26+00:00",
+     "views": 47,
+     "past3s": 17.8
+    },
+    {
+     "t": "2026-10-30T00:57+00:00",
      "views": 47,
      "past3s": 17.8
     }
@@ -616,6 +646,11 @@
      "t": "2026-10-29T18:26+00:00",
      "views": 159,
      "past3s": 64.3
+    },
+    {
+     "t": "2026-10-30T00:57+00:00",
+     "views": 159,
+     "past3s": 64.3
     }
    ],
    "hook_type": null,
@@ -708,6 +743,11 @@
     },
     {
      "t": "2026-10-29T18:26+00:00",
+     "views": 9,
+     "past3s": null
+    },
+    {
+     "t": "2026-10-30T00:57+00:00",
      "views": 9,
      "past3s": null
     }
@@ -817,6 +857,11 @@
      "t": "2026-10-29T18:26+00:00",
      "views": 115,
      "past3s": 32.7
+    },
+    {
+     "t": "2026-10-30T00:57+00:00",
+     "views": 115,
+     "past3s": 32.7
     }
    ],
    "hook_type": null,
@@ -835,6 +880,12 @@
    "id": "reel-202610280630",
    "post_at": "2026-10-28T06:30:00Z",
    "status": "held",
+   "trial": false
+  },
+  {
+   "id": "reel-202610300630",
+   "post_at": "2026-10-30T06:30:00Z",
+   "status": "queued",
    "trial": false
   }
  ]
